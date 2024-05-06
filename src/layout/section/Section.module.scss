@@ -1,0 +1,28 @@
+.container {
+    height: 80vh;
+    background-color: rgb(224, 218, 218);
+    border: double rgb(43, 42, 42);
+    padding: 30px 0;
+}
+
+.paragraph,
+p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding-left: 20%;
+    padding-right: 20%;
+
+}
+
+.container img {
+    border-radius: 30px;
+    max-width: 50vw;
+}
+
+.advertisement {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
