@@ -21,7 +21,7 @@ const Section = () => {
                 oluptatem suscipit provident debitis ipsu
             </p>
 
-            <img src={homePhoto} class="img-fluid" alt="home-page" />
+            <img src={homePhoto} alt="home-page" />
 
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis
