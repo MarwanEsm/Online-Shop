@@ -3,6 +3,7 @@ import PageHeader from "../../layout/pageHeader/PageHeader"
 import Section from "../../layout/section/Section"
 import styles from "./Home.module.scss"
 import CountrySelector from "../../layout/elements/countrySelector/CountrySelector"
+import { useSelector } from "react-redux"
 
 const NAVBAR_ITEMS = [
     { label: "Home", href: "/" },
@@ -11,8 +12,8 @@ const NAVBAR_ITEMS = [
 ]
 const Home = () => {
 
-
-
+    const selectedCountry = useSelector(state => state.selectedCountry)
+    console.log(selectedCountry);
 
     return <div className={styles.container}>
         <PageHeader />

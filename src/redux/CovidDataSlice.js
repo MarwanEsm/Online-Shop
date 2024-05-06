@@ -18,6 +18,6 @@ export const CovidDataSlice = createSlice({
 })
 
 
-export const { selectedCountry, setData } = CovidDataSlice.actions
+export const { setSelectedCountry, setData } = CovidDataSlice.actions
 
 export default CovidDataSlice.reducer
