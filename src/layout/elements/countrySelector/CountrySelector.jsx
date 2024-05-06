@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import Async from "react-select/async"
+import Select from "react-select/async"
 
 const CountrySelector = () => {
 
@@ -18,7 +18,7 @@ const CountrySelector = () => {
     }, [])
 
 
-    return <Async
+    return <Select
         loadOptions={getData}
     />
 }
