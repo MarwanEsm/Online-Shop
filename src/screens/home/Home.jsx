@@ -1,8 +1,9 @@
-import Navbar from "../../layout/navbar/Navbar"
-import PageHeader from "../../layout/pageHeader/PageHeader"
-import Section from "../../layout/section/Section"
+import Navbar from "../../components/layout/navbar/Navbar"
+import PageHeader from "../../components/layout/pageHeader/PageHeader"
+import Section from "../../components/layout/section/Section"
 import styles from "./Home.module.scss"
-import CountrySelector from "../../layout/elements/countrySelector/CountrySelector"
+import CountrySelector from "../../components/elements/countrySelector/CountrySelector"
+import Table from "../../components/layout/table/Table"
 import { useSelector } from "react-redux"
 
 const NAVBAR_ITEMS = [
@@ -13,7 +14,6 @@ const NAVBAR_ITEMS = [
 const Home = () => {
 
     const selectedCountry = useSelector(state => state.selectedCountry)
-    console.log(selectedCountry);
 
     return <div className={styles.container}>
         <PageHeader />
@@ -23,6 +23,7 @@ const Home = () => {
         <div>
             <CountrySelector />
         </div>
+        <Table />
 
     </div>
 }

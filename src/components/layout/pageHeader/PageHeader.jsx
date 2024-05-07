@@ -1,4 +1,4 @@
-import icon from "../../assets/Photos/pageicon.png";
+import icon from "../../../assets/Photos/pageicon.png";
 import styles from "./PageHeader.module.scss";
 
 const PageHeader = () => (

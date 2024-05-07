@@ -1,5 +1,5 @@
 import styles from "./Section.module.scss"
-import homePhoto from "../../assets/Photos/Heading.png"
+import homePhoto from "../../../assets/Photos/Heading.png"
 
 const Section = () => {
 
