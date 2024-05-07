@@ -9,13 +9,29 @@ const Table = () => {
     const [currentPage, setCurrentPage] = useState(1);
 
     const getTotal = (value, country) => {
+
         const val = country[value];
-        if (val !== "NA" && val !== "NaN") {
-            return parseInt(val);
+
+        if (typeof val === "string" && val !== "NA" && !isNaN(val)) {
+            return parseInt(val.replace(/,/g, ""), 10);
+
+        } else if (!isNaN(val)) {
+            return val;
+
         } else {
             return 0;
         }
     };
+
+    const getFormattedNumber = (number) => {
+        if (number === null || number === undefined) {
+            return "N/A";
+        }
+        const numString = number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return numString;
+    };
+
+
 
     const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
     const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
@@ -57,10 +73,6 @@ const Table = () => {
     );
 };
 
-// Function to add commas between every three digits in a number
-const getFormattedNumber = (number) => {
-    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-};
 
 const Pagination = ({ itemsPerPage, totalItems, currentPage, paginate }) => {
     const pageNumbers = [];
