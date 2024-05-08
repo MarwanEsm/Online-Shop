@@ -7,13 +7,11 @@ import Table from "../../components/layout/table/Table"
 import { useSelector } from "react-redux"
 
 const NAVBAR_ITEMS = [
-    { label: "Home", href: "/" },
     { label: "About", href: "/about" },
+    { label: "Design a Mask", href: "/design" },
     { label: "Shop", href: "/shop" }
 ]
 const Home = () => {
-
-    const selectedCountry = useSelector(state => state.selectedCountry)
 
     return <div className={styles.container}>
         <PageHeader />
