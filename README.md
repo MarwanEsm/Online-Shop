@@ -15,7 +15,7 @@ Our Online Mask Shop offers the following features:
 ## Setup Instructions ##
 To set up our Online Mask Shop locally, follow these steps:
 
-* Clone Repository: git clone https://github.com/your-username/online-mask-shop.git
+* Clone Repository: git clone [https://github.com/MarwanEsm/online-mask-shop.git](https://github.com/MarwanEsm/Online-Shop.git)
 * Navigate to Directory: Navigate to the directory containing the cloned repository: cd online-mask-shop
 * Install Dependencies: Install the necessary dependencies by running: npm install
 * Start Development Server: Start the development server by running: npm start
