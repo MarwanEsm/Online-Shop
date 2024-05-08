@@ -20,9 +20,7 @@ const Home = () => {
         <Navbar items={NAVBAR_ITEMS} />
         <Section />
         <h2>Daily Corona Numbers</h2>
-        <div>
-            <CountrySelector />
-        </div>
+        <CountrySelector />
         <Table />
 
     </div>

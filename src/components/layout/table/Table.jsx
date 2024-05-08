@@ -40,7 +40,7 @@ const Table = () => {
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
-        <div className={styles["table-container"]}>
+        <div className={styles.container}>
             <table className={styles.table}>
                 <thead>
                     <tr>

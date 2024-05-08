@@ -14,6 +14,10 @@ p {
 
 }
 
+p {
+    text-decoration: dotted;
+}
+
 .container img {
     border-radius: 30px;
     max-width: 50vw;
@@ -25,4 +29,23 @@ p {
     justify-content: center;
     align-items: center;
     padding-top: 40px;
+}
+
+.container h3 {
+    position: relative;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #f9d134;
 }
