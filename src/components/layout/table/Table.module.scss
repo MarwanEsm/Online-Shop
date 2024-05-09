@@ -24,6 +24,10 @@ td {
     font-size: 14px;
 }
 
+td:hover {
+    cursor: pointer;
+}
+
 .pagination {
     list-style: none;
     padding: 0;
