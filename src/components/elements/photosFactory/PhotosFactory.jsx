@@ -1,10 +1,19 @@
+import styles from "./PhotosFactory.module.scss"
 
+const PhotosFactory = ({ src, content, label, index, onReadMore, expanded }) => {
+    const handleClick = () => {
+        onReadMore(index);
+    };
 
-const PhotosFactory = ({ src, content, label, index, onReadMore }) =>
-    <div key={index}>
-        <img src={src} alt="mask" />
-        <p>{content}</p>
-        <button onClick={() => onReadMore(index)}>{label}</button>
-    </div>
+    return (
+        <div className={styles.photoContainer}>
+            <img src={src} alt={`photo_${index}`} />
+            <div className={styles.content} style={{ height: expanded ? "250px" : "100px" }}>
+                <p>{content}</p>
+            </div>
+            <button onClick={handleClick}>{label}</button>
+        </div>
+    );
+};
 
-export default PhotosFactory
+export default PhotosFactory;

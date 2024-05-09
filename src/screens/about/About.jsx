@@ -41,12 +41,15 @@ const About = () => {
 
     return (
         <div className={styles.container}>
+
             <PageHeader />
+
             <Navbar items={NAVBAR_ITEMS} />
 
             <img src={masksShop} alt="masks_shop" />
 
             <h2>Mask Challenges and Importance</h2>
+
             <div className={styles.photosContainer}>
                 {IMAGES.map((image, index) =>
                     <PhotosFactory
@@ -63,6 +66,7 @@ const About = () => {
                                 setSelectedPhoto(null)
                             }
                         }}
+                        expanded={selectedPhoto === index}
                     />
                 )}
             </div>
