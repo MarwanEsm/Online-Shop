@@ -11,17 +11,19 @@ const NAVBAR_ITEMS = [
     { label: "Design a Mask", href: "/design" },
     { label: "Shop", href: "/shop" }
 ]
-const Home = () => {
-
-    return <div className={styles.container}>
+const Home = () =>
+    <div className={styles.container}>
         <PageHeader />
+
         <Navbar items={NAVBAR_ITEMS} />
+
         <Section />
+
         <h2>Daily Corona Numbers</h2>
         <CountrySelector />
-        <Table />
 
+        <Table />
     </div>
-}
+
 
 export default Home
