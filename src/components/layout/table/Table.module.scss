@@ -1,11 +1,13 @@
 .container {
     margin: 40px;
+    border: double;
 
 }
 
 .table {
     width: 100%;
     border-collapse: collapse;
+    text-align: center;
 }
 
 th,
@@ -13,7 +15,8 @@ td {
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-    min-width: 200px;
+    width: 150px;
+    text-align: center;
 }
 
 th {
@@ -42,20 +45,21 @@ td:hover {
     display: inline-block;
     padding: 8px 12px;
     margin: 0 4px;
-    background-color: #f2f2f2;
     border: 1px solid #ddd;
     cursor: pointer;
     text-decoration: none;
     color: #333;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    border: double;
 
     &:hover {
         background-color: #ddd;
+        color: black;
     }
 }
 
-.active {
+.active button {
     background-color: #007bff;
     color: #fff;
 }

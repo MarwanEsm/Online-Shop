@@ -58,6 +58,10 @@ p {
     position: relative;
 }
 
+.container strong {
+    color: #dbbb39;
+}
+
 .container p::after {
     content: '';
     position: absolute;

@@ -6,7 +6,7 @@ const Section = () =>
     <div className={styles.container}>
         <div className={styles.paragraph}>
             <h3>
-                Welcome to our online store! Stay safe and stylish with our premium collection of COVID masks
+                Welcome to your <strong>Shielded Chic</strong> Stay safe and stylish with our premium collection of COVID masks
             </h3>
         </div>
 
