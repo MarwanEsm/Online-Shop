@@ -8,7 +8,7 @@ const PageHeader = () => (
         </div>
 
         <div className={styles.actions}>
-            <a href="/help">Help</a>
+            <a href="/help">Login</a>
             <span>|</span>
             <a href="/register">Register</a>
         </div>

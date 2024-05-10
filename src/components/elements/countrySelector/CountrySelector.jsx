@@ -22,7 +22,7 @@ const CountrySelector = () => {
     return <Select
         loadOptions={getData}
         onChange={(value) => dispatch(setSelectedCountry(value))}
-        placeholder="Please type in a country"
+        placeholder="Search by country"
         isClearable
     />
 }
