@@ -4,6 +4,7 @@ import Section from "../../components/layout/section/Section"
 import styles from "./Home.module.scss"
 import CountrySelector from "../../components/elements/countrySelector/CountrySelector"
 import Table from "../../components/layout/table/Table"
+import Footer from "../../components/layout/footer/Footer"
 import { useSelector } from "react-redux"
 
 const NAVBAR_ITEMS = [
@@ -11,17 +12,21 @@ const NAVBAR_ITEMS = [
     { label: "Design a Mask", href: "/design" },
     { label: "Shop", href: "/shop" }
 ]
-const Home = () => {
-
-    return <div className={styles.container}>
+const Home = () =>
+    <div className={styles.container}>
         <PageHeader />
+
         <Navbar items={NAVBAR_ITEMS} />
+
         <Section />
+
         <h2>Daily Corona Numbers</h2>
         <CountrySelector />
+
         <Table />
 
+        <Footer />
     </div>
-}
+
 
 export default Home

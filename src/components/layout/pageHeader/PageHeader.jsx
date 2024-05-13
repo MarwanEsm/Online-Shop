@@ -1,7 +1,7 @@
 import icon from "../../../assets/Photos/pageicon.png";
 import styles from "./PageHeader.module.scss";
 
-const PageHeader = () => (
+const PageHeader = () =>
     <div className={styles.container}>
         <div className={styles["icon-container"]}>
             <img src={icon} alt="Mask" />
@@ -13,6 +13,6 @@ const PageHeader = () => (
             <a href="/register">Register</a>
         </div>
     </div>
-);
+
 
 export default PageHeader;

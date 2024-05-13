@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import styles from "./Table.module.scss"; // Import the SCSS file
+import styles from "./Table.module.scss";
 
 const ITEMS_PER_PAGE = 10; // Number of items per page
 

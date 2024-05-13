@@ -1,6 +1,8 @@
 import styles from "./PhotosFactory.module.scss"
 
 const PhotosFactory = ({ src, content, label, index, onReadMore, expanded }) => {
+
+
     const handleClick = () => {
         onReadMore(index);
     };
