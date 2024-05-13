@@ -4,6 +4,7 @@ import Section from "../../components/layout/section/Section"
 import styles from "./Home.module.scss"
 import CountrySelector from "../../components/elements/countrySelector/CountrySelector"
 import Table from "../../components/layout/table/Table"
+import Footer from "../../components/layout/footer/Footer"
 import { useSelector } from "react-redux"
 
 const NAVBAR_ITEMS = [
@@ -23,6 +24,8 @@ const Home = () =>
         <CountrySelector />
 
         <Table />
+
+        <Footer />
     </div>
 
 

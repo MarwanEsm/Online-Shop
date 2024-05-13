@@ -7,6 +7,7 @@ import maskGlasses from "../../assets/Photos/MaskGlasses.jpg";
 import maskSport from "../../assets/Photos/MaskSport.jpg"
 import maskElderly from "../../assets/Photos/MaskElderly.jpg"
 import PhotosFactory from "../../components/elements/photosFactory/PhotosFactory";
+import Footer from '../../components/layout/footer/Footer';
 
 const NAVBAR_ITEMS = [
     { label: "Home", href: "/" },
@@ -70,6 +71,7 @@ const About = () => {
                     />
                 )}
             </div>
+            <Footer />
         </div>
     );
 };
