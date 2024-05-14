@@ -36,7 +36,7 @@ const CountrySelector = () => {
 
     useEffect(() => {
         fetchData();
-    }, []);
+    });
 
 
     return (

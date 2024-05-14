@@ -1,4 +1,3 @@
-import { Row, Col } from "reactstrap"
 import styles from "./Footer.module.scss"
 
 
@@ -23,7 +22,7 @@ const Footer = () =>
         {FOOTER_ITEMS.map((item, index) =>
             <div key={index}>
                 <label key={index}>{item.title}</label>
-                {item.items.map((item, index) => <a href="#" key={index}>{item}</a>)}
+                {item.items.map((item, index) => <a href="/" key={index}>{item}</a>)}
             </div>)}
     </div>
 
