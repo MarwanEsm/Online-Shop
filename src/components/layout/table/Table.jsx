@@ -54,15 +54,16 @@ const Table = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {(selectedCountry === null ? currentItems : data.filter(country => country.country === selectedCountry.label)).map((country) => (
-                        <tr key={country.country}>
-                            <td>{country.country}</td>
-                            <td>{getFormattedNumber(getTotal("recovered", country))}</td>
-                            <td>{getFormattedNumber(getTotal("deceased", country))}</td>
-                            <td>{getFormattedNumber(getTotal("tested", country))}</td>
-                            <td>{getFormattedNumber(getTotal("infected", country))}</td>
-                        </tr>
-                    ))}
+                    {(selectedCountry === null ? currentItems : data.filter(country => country.country === selectedCountry.label))
+                        .map((country) => (
+                            <tr key={country.country}>
+                                <td>{country.country}</td>
+                                <td>{getFormattedNumber(getTotal("recovered", country))}</td>
+                                <td>{getFormattedNumber(getTotal("deceased", country))}</td>
+                                <td>{getFormattedNumber(getTotal("tested", country))}</td>
+                                <td>{getFormattedNumber(getTotal("infected", country))}</td>
+                            </tr>
+                        ))}
                 </tbody>
             </table>
             <Pagination
