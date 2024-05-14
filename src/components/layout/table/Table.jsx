@@ -33,8 +33,6 @@ const Table = () => {
         return numString;
     };
 
-
-
     const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
     const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
     const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);

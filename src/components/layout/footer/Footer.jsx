@@ -21,7 +21,7 @@ const FOOTER_ITEMS = [
 const Footer = () =>
     <div className={styles.container}>
         {FOOTER_ITEMS.map((item, index) =>
-            <div>
+            <div key={index}>
                 <label key={index}>{item.title}</label>
                 {item.items.map((item, index) => <a href="#" key={index}>{item}</a>)}
             </div>)}
