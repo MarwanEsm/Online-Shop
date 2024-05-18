@@ -5,8 +5,9 @@ import styles from "./Table.module.scss";
 const ITEMS_PER_PAGE = 10; // Number of items per page
 
 const Table = () => {
-    const data = useSelector((state) => state.data);
-    const selectedCountry = useSelector(state => state.selectedCountry)
+    const data = useSelector((state) => state.covid.data);
+    const selectedCountry = useSelector(state => state.covid.selectedCountry)
+    console.log(selectedCountry);
 
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -37,6 +38,7 @@ const Table = () => {
     const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
     const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
 
+
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
@@ -52,21 +54,16 @@ const Table = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {currentItems.filter(country => {
-                        if (selectedCountry !== null) {
-                            return country.country === selectedCountry?.label
-                        } else {
-                            return country
-                        }
-                    }).map((country) => (
-                        <tr key={country.country}>
-                            <td>{country.country}</td>
-                            <td>{getFormattedNumber(getTotal("recovered", country))}</td>
-                            <td>{getFormattedNumber(getTotal("deceased", country))}</td>
-                            <td>{getFormattedNumber(getTotal("tested", country))}</td>
-                            <td>{getFormattedNumber(getTotal("infected", country))}</td>
-                        </tr>
-                    ))}
+                    {(selectedCountry === null ? currentItems : data.filter(country => country.country === selectedCountry.label))
+                        .map((country) => (
+                            <tr key={country.country}>
+                                <td>{country.country}</td>
+                                <td>{getFormattedNumber(getTotal("recovered", country))}</td>
+                                <td>{getFormattedNumber(getTotal("deceased", country))}</td>
+                                <td>{getFormattedNumber(getTotal("tested", country))}</td>
+                                <td>{getFormattedNumber(getTotal("infected", country))}</td>
+                            </tr>
+                        ))}
                 </tbody>
             </table>
             <Pagination
