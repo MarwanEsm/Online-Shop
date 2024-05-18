@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PageHeader from "../../components/layout/pageHeader/PageHeader";
 import Navbar from "../../components/layout/navbar/Navbar";
 import Registration from "../../components/layout/forms/registration/Registration";
@@ -16,7 +16,6 @@ const NAVBAR_ITEMS = [
 const SignUp = () => {
 
     const form = useSelector(state => state.form.form)
-    console.log(form);
 
 
     return (
