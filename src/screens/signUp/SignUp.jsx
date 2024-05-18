@@ -6,7 +6,6 @@ import Footer from "../../components/layout/footer/Footer";
 import Login from '../../components/layout/forms/login/Login';
 import styles from "./SignUp.module.scss";
 
-
 const NAVBAR_ITEMS = [
     { label: "About", href: "/about" },
     { label: "Home", href: "/home" },
@@ -14,17 +13,13 @@ const NAVBAR_ITEMS = [
 ];
 
 const SignUp = () => {
-    const [displayLoginForm, setDisplayLoginForm] = useState(false)
+    const [displayLoginForm, setDisplayLoginForm] = useState(false);
 
-    const switchForm = () => {
-        if (!displayLoginForm)
-            setDisplayLoginForm(true)
-        setDisplayLoginForm(false)
-    }
+
 
     return (
         <div className={styles.container}>
-            <PageHeader onFormChange={switchForm} />
+            <PageHeader />
             <Navbar items={NAVBAR_ITEMS} />
             <div>
                 {displayLoginForm ? <Login /> : <Registration />}
