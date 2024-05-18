@@ -2,7 +2,7 @@ import icon from "../../../assets/Photos/pageicon.png";
 import styles from "./PageHeader.module.scss";
 import { useLocation } from "react-router-dom";
 
-const PageHeader = () => {
+const PageHeader = ({ onFormChange }) => {
 
     const location = useLocation()
 
@@ -15,9 +15,9 @@ const PageHeader = () => {
         </div>
 
         <div className={styles.actions}>
-            {(isRegistrationPage || !isLoginPage) && <a href="/login">Login</a>}
+            {(isRegistrationPage || !isLoginPage) && <label onClick={onFormChange}>Login</label>}
             {(!isRegistrationPage && !isLoginPage) && <span>|</span>}
-            {(isLoginPage || !isRegistrationPage) && <a href="/register">Register</a>}
+            {(isLoginPage || !isRegistrationPage) && <label onClick={onFormChange}>Register</label>}
         </div>
     </div>
 }
