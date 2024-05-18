@@ -5,16 +5,18 @@ import Registration from "../../components/layout/forms/registration/Registratio
 import Footer from "../../components/layout/footer/Footer";
 import Login from '../../components/layout/forms/login/Login';
 import styles from "./SignUp.module.scss";
+import { useSelector } from 'react-redux';
 
 const NAVBAR_ITEMS = [
     { label: "About", href: "/about" },
-    { label: "Home", href: "/home" },
+    { label: "Home", href: "/" },
     { label: "Shop", href: "/shop" }
 ];
 
 const SignUp = () => {
-    const [displayLoginForm, setDisplayLoginForm] = useState(false);
 
+    const form = useSelector(state => state.form.form)
+    console.log(form);
 
 
     return (
@@ -22,7 +24,8 @@ const SignUp = () => {
             <PageHeader />
             <Navbar items={NAVBAR_ITEMS} />
             <div>
-                {displayLoginForm ? <Login /> : <Registration />}
+                {form === "register" && <Registration />}
+                {form === "login" && <Login />}
             </div>
             <Footer />
         </div>
