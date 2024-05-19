@@ -4,9 +4,11 @@ export const FormSlice = createSlice({
     name: "form",
     initialState: {
         form: "",
+        isRegistered: false,
         registrationDetails: {
             first_name: "",
             last_name: "",
+            email: "",
             password: "",
         }
     },
@@ -16,9 +18,12 @@ export const FormSlice = createSlice({
         },
         setRegistrationDetails: (state, action) => {
             state.registrationDetails = action.payload
+        },
+        setIsRegistered: (state, action) => {
+            state.isRegistered = action.payload
         }
     }
 });
 
-export const { setForm, setRegistrationDetails } = FormSlice.actions;
+export const { setIsRegistered, setForm, setRegistrationDetails } = FormSlice.actions;
 export default FormSlice.reducer;

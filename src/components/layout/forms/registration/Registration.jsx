@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "reactstrap";
 import { useDispatch } from "react-redux";
-import { setRegistrationDetails } from "../../../../redux/FormSlice";
+import { setRegistrationDetails, setIsRegistered } from "../../../../redux/FormSlice";
 import styles from "./Registration.module.scss";
 import bcrypt from 'bcryptjs';
 
@@ -9,12 +9,11 @@ const Registration = () => {
     const [details, setDetails] = useState({
         first_name: "",
         last_name: "",
-        password: "",
-        confirm_password: ""
+        email: "",
+        password: "", // Add password to initial state
     });
 
-    const dispatch = useDispatch()
-
+    const dispatch = useDispatch();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -26,23 +25,19 @@ const Registration = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (details.password !== details.confirm_password) {
-            alert("Passwords do not match!");
-            return;
-        }
 
         const hashedPassword = bcrypt.hashSync(details.password, 10);
 
         const updatedDetails = {
             first_name: details.first_name,
             last_name: details.last_name,
+            email: details.email,
             password: hashedPassword,
         };
 
-        dispatch(setRegistrationDetails(updatedDetails))
+        dispatch(setRegistrationDetails(updatedDetails));
+        dispatch(setIsRegistered(true));
     };
-
-
 
     return (
         <div className={styles.container}>
@@ -53,28 +48,28 @@ const Registration = () => {
                     placeholder="First Name"
                     autoCapitalize="off"
                     onChange={handleChange}
-                    value={details.first_name}
+                    value={details.first_name || ""}
                 />
                 <input
                     type="text"
                     name="last_name"
                     placeholder="Last Name"
                     onChange={handleChange}
-                    value={details.last_name}
+                    value={details.last_name || ""}
+                />
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    onChange={handleChange}
+                    value={details.email || ""}
                 />
                 <input
                     type="password"
                     name="password"
                     placeholder="Password"
                     onChange={handleChange}
-                    value={details.password}
-                />
-                <input
-                    type="password"
-                    name="confirm_password"
-                    placeholder="Confirm Password"
-                    onChange={handleChange}
-                    value={details.confirm_password}
+                    value={details.password || ""}
                 />
                 <Button type="submit" color="secondary" size="lg" outline>
                     Register
