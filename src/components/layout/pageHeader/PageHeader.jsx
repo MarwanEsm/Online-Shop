@@ -1,29 +1,19 @@
 import React from 'react';
 import icon from "../../../assets/Photos/pageicon.png";
 import styles from "./PageHeader.module.scss";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { setForm } from '../../../redux/FormSlice';
+import { Link } from 'react-router-dom';
 
 const PageHeader = () => {
-    const location = useLocation();
 
+    const location = useLocation();
     const dispatch = useDispatch()
-    const navigate = useNavigate()
 
     const isRegistrationPage = location.pathname.includes("register");
     const isLoginPage = location.pathname.includes("login");
 
-
-    const handleLogin = () => {
-        navigate("/login")
-        dispatch(setForm("login"))
-    }
-
-    const handleRegister = () => {
-        navigate("/register")
-        dispatch(setForm("register"))
-    }
 
     return (
         <div className={styles.container}>
@@ -32,9 +22,14 @@ const PageHeader = () => {
             </div>
 
             <div className={styles.actions}>
-                {(isRegistrationPage || !isLoginPage) && <label onClick={handleLogin}>Login</label>}
+                {(isRegistrationPage || !isLoginPage) &&
+                    <Link to={"/login"} onClick={() => dispatch(setForm("login"))}>Login</Link>
+                }
                 {(!isRegistrationPage && !isLoginPage) && <span>|</span>}
-                {(isLoginPage || !isRegistrationPage) && <label onClick={handleRegister}>Register</label>}
+
+                {(isLoginPage || !isRegistrationPage) &&
+                    <Link to={"/register"} onClick={() => dispatch(setForm("register"))}>Register</Link>
+                }
             </div>
         </div>
     );

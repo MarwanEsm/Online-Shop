@@ -3,7 +3,6 @@ import styles from "./Login.module.scss"
 
 const Login = () => {
 
-
     return <div className={styles.container}>
         <form className={styles.form}>
             <input type="email" placeholder="Email Address" />

@@ -5,9 +5,9 @@ import styles from "./Table.module.scss";
 const ITEMS_PER_PAGE = 10; // Number of items per page
 
 const Table = () => {
+
     const data = useSelector((state) => state.covid.data);
     const selectedCountry = useSelector(state => state.covid.selectedCountry)
-    console.log(selectedCountry);
 
     const [currentPage, setCurrentPage] = useState(1);
 

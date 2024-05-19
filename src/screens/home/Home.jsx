@@ -20,7 +20,7 @@ const Home = () =>
 
         <Section />
 
-        <h2>Daily Corona Numbers</h2>
+        <h4>Daily Corona Numbers</h4>
         <CountrySelector />
 
         <Table />
