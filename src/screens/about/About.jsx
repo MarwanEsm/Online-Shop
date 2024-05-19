@@ -49,7 +49,7 @@ const About = () => {
 
             <img src={masksShop} alt="masks_shop" />
 
-            <h2>Mask Challenges and Importance</h2>
+            <h4>Mask Challenges and Importance</h4>
 
             <div className={styles.photosContainer}>
                 {IMAGES.map((image, index) =>
