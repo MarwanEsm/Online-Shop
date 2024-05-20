@@ -1,18 +1,50 @@
 import styles from "./Footer.module.scss"
+import { Link } from "react-router-dom";
 
 
 const FOOTER_ITEMS = [
     {
         title: "About",
-        items: ["Company", "Contact"]
+        items: [{
+            title: "Company",
+            href: "/company"
+        },
+        {
+            title: "Contact",
+            href: "/contact"
+        }]
     },
     {
         title: "Shop",
-        items: ["Face Masks", "Sanitizers", "Gloves"]
+        items: [{
+            title: "Face Masks",
+            href: "/masks"
+        },
+        {
+            title: "Sanitizers",
+            href: "/somewhere"
+        },
+        {
+            title: "Gloves",
+            href: "/gloves"
+        }
+        ]
     },
     {
         title: "Resources",
-        items: ["FAQ", "Shipping Info", "Returns"]
+        items: [{
+            title: "FAQ",
+            href: "/FAQ"
+        },
+        {
+            title: "Shipping Info",
+            href: "/info"
+        },
+        {
+            title: "Returns",
+            href: "/return"
+        }
+        ]
     }
 ];
 
@@ -22,7 +54,7 @@ const Footer = () =>
         {FOOTER_ITEMS.map((item, index) =>
             <div key={index}>
                 <label key={index}>{item.title}</label>
-                {item.items.map((item, index) => <a href="/" key={index}>{item}</a>)}
+                {item.items.map((item, index) => <Link to={item.href} key={index}>{item.title}</Link>)}
             </div>)}
     </div>
 
