@@ -4,6 +4,7 @@ import { store } from "./redux/Store";
 import Home from "./screens/home/Home";
 import About from "./screens/about/About";
 import SignUp from "./screens/signUp/SignUp";
+import Contact from "./screens/contact/Contact";
 import "./style/global.scss"
 
 const App = () =>
@@ -14,6 +15,7 @@ const App = () =>
                 <Route path="/about" element={<About />} />
                 <Route path="/register" element={<SignUp />} />
                 <Route path="/login" element={<SignUp />} />
+                <Route path="/contact" element={<Contact />} />
             </Routes>
         </Router>
     </Provider>
