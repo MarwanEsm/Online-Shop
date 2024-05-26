@@ -20,34 +20,34 @@ const ContactUs = () => {
             <form action="#" method="post" className={styles.contact_form}>
 
                 <div className={styles.name}>
-                    <label htmlFor="name"></label>
+                    <label htmlFor="first_name"></label>
                     <input
                         type="text"
-                        placeholder="My name is"
-                        name="name"
-                        id="name_input"
+                        placeholder="My first name is"
+                        name="first_name"
+                        id="firstName_input"
                         required
                     />
                 </div>
 
                 <div className={styles.email}>
-                    <label htmlFor="email"></label>
+                    <label htmlFor="last_name"></label>
                     <input
-                        type="email"
-                        placeholder="My e-mail is"
-                        name="email"
-                        id="email_input"
+                        type="text"
+                        placeholder="My last name is"
+                        name="last_name"
+                        id="lastName_input"
                         required
                     />
                 </div>
 
                 <div className={styles.telephone}>
-                    <label htmlFor="telephone"></label>
+                    <label htmlFor="email"></label>
                     <input
                         type="text"
-                        placeholder="My number is"
-                        name="telephone"
-                        id="telephone_input"
+                        placeholder="My email address is"
+                        name="email"
+                        id="email_input"
                         required
                     />
                 </div>
