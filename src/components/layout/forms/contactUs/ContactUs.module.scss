@@ -18,22 +18,22 @@
 }
 
 
-input,
-textarea {
+.container input,
+.container textarea {
     color: #5A5A5A;
     font: inherit;
     margin: 0;
 }
 
-input {
+.container input {
     line-height: normal;
 }
 
-textarea {
+.container textarea {
     overflow: auto;
 }
 
-form {
+.contact_form {
     padding: 37.5px;
     margin: 50px 0;
 }
@@ -63,9 +63,9 @@ form {
     width: 45%;
 }
 
-input[type='text'],
-[type='email'],
-textarea {
+.container input[type='text'],
+.container input[type='email'],
+.container textarea {
     font-size: 18px;
     background: none;
     border: none;
@@ -88,9 +88,9 @@ textarea {
 }
 
 
-input[type='text']:focus,
-[type='email']:focus,
-textarea:focus {
+.container input[type='text']:focus,
+.container input [type='email']:focus,
+.container textarea:focus {
     outline: none;
     padding: 0 0 0.875em 0;
 }
@@ -109,28 +109,28 @@ textarea:focus {
     width: 100%;
 }
 
-textarea {
+.container textarea {
     line-height: 150%;
     height: 150px;
     resize: none;
     width: 100%;
 }
 
-::-webkit-input-placeholder {
+.container::-webkit-input-placeholder {
     color: #474544;
 }
 
-:-moz-placeholder {
-    color: #474544;
-    opacity: 1;
-}
-
-::-moz-placeholder {
+.container:-moz-placeholder {
     color: #474544;
     opacity: 1;
 }
 
-:-ms-input-placeholder {
+.container::-moz-placeholder {
+    color: #474544;
+    opacity: 1;
+}
+
+.container:-ms-input-placeholder {
     color: #474544;
 }
 
